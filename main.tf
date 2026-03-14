@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "mahima"
+    organization = "mahima-test"
 
     workspaces {
       name = "aws-demo-workspace"
