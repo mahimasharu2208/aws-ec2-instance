@@ -3,7 +3,7 @@ terraform {
     organization = "mahima-test"
 
     workspaces {
-      name = "aws-demo-workspace"
+      name = "aws-ec2-instance"
     }
   }
 
