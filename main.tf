@@ -19,18 +19,8 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-data "aws_ami" "amazon_linux" {
-  most_recent = true
-  owners      = ["amazon"]
-
-  filter {
-    name   = "name"
-    values = ["al2023-ami-*-x86_64-*"]
-  }
-}
-
 resource "aws_instance" "demo" {
-  ami           = data.aws_ami.amazon_linux.id
+  ami           = "ami-0f5ee92e2d63afc18"
   instance_type = "t2.micro"
 
   tags = {
