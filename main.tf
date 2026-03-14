@@ -17,6 +17,9 @@ terraform {
 
 provider "aws" {
   region = "ap-south-1"
+  assume_role {
+    role_arn = "arn:aws:iam::625041985655:role/aws_mahima.sharu_test-admin"
+  }
 }
 
 resource "aws_instance" "demo" {
