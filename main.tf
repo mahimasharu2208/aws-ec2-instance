@@ -1,11 +1,11 @@
 terraform {
-  cloud {
-    organization = "mahima-test"
+  /*cloud {
+    organization = "auth-learning"
 
     workspaces {
-      name = "aws-ec2-instance"
+      name = "aws-ec2-instance-test"
     }
-  }
+  }*/
 
   required_providers {
     aws = {
@@ -16,11 +16,11 @@ terraform {
 }
 
 provider "aws" {
-  region = "ap-south-1"
+  region = "us-east-1"
 }
 
 resource "aws_instance" "demo" {
-  ami           = "ami-0f5ee92e2d63afc18"
+  ami           = "ami-02b64aa047cb5edf5"
   instance_type = "t2.micro"
 
   tags = {
